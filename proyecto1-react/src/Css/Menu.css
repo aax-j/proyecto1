@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.navbar-logo img {
+  height: 40px; /* Ajusta según el tamaño de tu logo */
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--color-secondary);
+}
+
+.btn-join {
+  background-color: var(--color-secondary);
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  transition: background 0.3s ease !important;
+}
+
+.btn-join:hover {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+/* Responsive básico */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Aquí podrías implementar un menú hamburguesa */
+  }
+}

@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+:root {
+  /* --- COLORES DE MARCA (Extraídos del Logo) --- */
+  --color-primary: #1A4B84;       /* Azul Marino (Confianza y Seriedad) */
+  --color-primary-dark: #12355E;  /* Azul más oscuro para hovers */
+  --color-secondary: #F7941E;     /* Naranja (Acción y Energía) */
+  --color-secondary-dark: #D67D16; /* Naranja para estados activos */
+  
+  /* --- COLORES COMPLEMENTARIOS PARA GRÁFICOS/DATOS --- */
+  --color-accent-green: #39B54A;  /* Verde (Crecimiento/Éxito) */
+  --color-accent-red: #EE4036;    /* Rojo (Alertas/Descensos) */
+  --color-accent-yellow: #FFD200; /* Amarillo (Precaución) */
+
+  /* --- NEUTROS Y SUPERFICIES (Contraste y Legibilidad) --- */
+  --bg-main: #F8F9FA;             /* Fondo general de la página */
+  --bg-card: #FFFFFF;             /* Fondo de tarjetas y contenedores */
+  --text-main: #212529;           /* Color de texto principal (Legible) */
+  --text-muted: #6C757D;          /* Texto secundario o descripciones */
+  --border-color: #DEE2E6;        /* Bordes sutiles y separadores */
+
+  /* --- TIPOGRAFÍA SUGERIDA --- */
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* --- ESPACIADO Y BORDES --- */
+  --radius: 8px;                  /* Bordes redondeados modernos */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ejemplo básico de aplicación global */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3 {
+  color: var(--color-primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-primary {
+  background-color: var(--color-secondary);
   color: white;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:hover {
+  background-color: var(--color-secondary-dark);
 }
