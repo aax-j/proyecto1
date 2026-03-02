@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './Js/menu.js'
 import Footer from './Js/Footer.js'
 import Inicio from './View/Inicio';
+import AcDe from './View/Actividades_desarrolladas';
 import Contacto from './View/Contacto';
 
 
@@ -18,7 +19,8 @@ function App() {
       
         <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/Actividades_desarrolladas" element={<AcDe />} />
+        <Route path="/Contacto" element={<Contacto />} />
         
         {/* Agrega aquí más rutas según necesites */}
         </Routes>
