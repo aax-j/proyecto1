@@ -1,0 +1,9 @@
+# Activar el motor de redirección (Mod Rewrite)
+RewriteEngine On
+
+# Evitar redirecciones para carpetas y archivos estáticos reales (CSS, JS, imágenes)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir las peticiones limpias a index.php?page=valor
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [L,QSA]
